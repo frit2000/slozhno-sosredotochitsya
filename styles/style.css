@@ -1,5 +1,104 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+
 }
+
+.title-decor{
+  background-color: var(--accent-color);
+}
+
+.header {
+  background-image: url(/images/cover-image-dark.png);
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr ;
+  align-items: center;
+  justify-items: end;
+  min-block-size: 668px;
+  padding-block: 20px;
+}
+
+
+.decorated-zone {
+  position: relative;
+  padding-inline: 10px;
+}
+
+.header__decoration{
+  position: absolute;
+  inset-inline-end: 19px;
+  inset-block-start: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+.header__decoration::before{
+  content:'REC';
+  color: var(--accent-color);
+  font-size: var(--main-font-size);
+  line-height: var(--main-font-lineheight);
+  font-family: 'IBM Plex mono', sans-serif;
+}
+.header__decoration::after{
+  content:'';
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  block-size: 9px;
+  inline-size: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+
+.header__title {
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: bold;
+  color: var(--no-focus-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-size: var(--no-focus-size);
+  line-height: var(--no-focus-lineheight);
+}
+
+.header__paragraph{
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: bold;
+  color: var(--header-font-color);
+  font-size: var(--main-font-size);
+  line-height: var(--main-font-lineheight);
+}
+
+.header__theme-menu{
+
+}
+
+.header__theme-menu-list {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px
+}
+
+.header__theme-menu-item{
+
+}
+
+.header__theme-menu-button{
+
+  cursor: pointer;
+  text-transform: lowercase;
+  min-inline-size: 70px;
+  min-block-size: 26px;
+  background-color: transparent;
+  font-family: 'IBM Plex mono', sans-serif;
+  font-weight: normal;
+  font-size: var(--main-font-size);
+  line-height: 18px;
+  color: var(--accent-color);
+  border: none;
+}
+
+.header__theme-menu-button_active{
+  pointer-events: none;
+  border: 1px solid var(--accent-color);
+}
+
