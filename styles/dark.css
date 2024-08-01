@@ -13,4 +13,35 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --corner-color: #ff0070;
+  --shadow-color: #ff0070;
+  --accent-color: #ff0070;
+  --accent-color-opacity: rgba(255, 0, 112, 0.6);
+  --header-font-color: #000028;
+  --main-font-color: #f1b2ce;
+  --no-focus-color: #db00ff;
+  --no-focus-lineheight: 95.7px;
+  --main-font-size: 18px;
+  --main-font-lineheight: 23.4px;
+  --background: url(/images/cover-image-dark.png);
+}
+
+.page.theme_dark .header__decoration {
+  visibility: visible;
+}
+
+.page.theme_dark .article__header {
+  color: var(--accent-color);
+}
+
+.page.theme_dark .header__theme-menu-button {
+  color: var(--accent-color);
+}
+
+.page.theme_dark .header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent-color);
+}
+
+.page.theme_dark .header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
 }

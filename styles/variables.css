@@ -4,14 +4,15 @@
 */
 
 :root {
-  --accent-color: #FF0070;
+  --corner-color: #ff0070;
+  --shadow-color: #ff0070;
+  --accent-color: #ff0070;
   --accent-color-opacity: rgba(255, 0, 112, 0.6);
   --header-font-color: #000028;
-  --main-font-color: #F1B2CE;
-  --no-focus-color: #DB00FF;
+  --main-font-color: #f1b2ce;
+  --no-focus-color: #db00ff;
   --no-focus-lineheight: 95.7px;
   --main-font-size: 18px;
   --main-font-lineheight: 23.4px;
-
-
+  --background: url(/images/cover-image.png);
 }
