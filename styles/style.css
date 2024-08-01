@@ -1,7 +1,14 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
+  background-image: url(/images/cover-image.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
 
+.side-padding {
+  padding-inline: 10px;
 }
 
 .title-decor{
@@ -15,15 +22,34 @@
   display: grid;
   grid-template-rows: 1fr 1fr 1fr ;
   align-items: center;
-  justify-items: end;
   min-block-size: 668px;
   padding-block: 20px;
 }
 
-
 .decorated-zone {
   position: relative;
-  padding-inline: 10px;
+
+}
+.decorated-zone::before {
+  position: absolute;
+  content: '';
+  block-size: 25px;
+  inline-size: 25px;
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start:  1px solid var(--accent-color);
+  inset-inline-end: 10px;
+  inset-block-start: 10px;
+}
+
+.decorated-zone::after {
+  position: absolute;
+  content: '';
+  block-size: 25px;
+  inline-size: 25px;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end:  1px solid var(--accent-color);
+  inset-inline-start: 10px;
+  inset-block-end: 10px;
 }
 
 .header__decoration{
@@ -42,6 +68,7 @@
   line-height: var(--main-font-lineheight);
   font-family: 'IBM Plex mono', sans-serif;
 }
+
 .header__decoration::after{
   content:'';
   box-shadow: 0px 0px 4px 2px var(--accent-color);
@@ -51,13 +78,17 @@
   background-color: var(--accent-color);
 }
 
-.header__title {
+.title {
   font-family: 'IBM Plex mono', sans-serif;
   font-weight: bold;
   color: var(--no-focus-color);
   text-shadow: 4px 4px 0 var(--accent-color);
-  font-size: var(--no-focus-size);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: var(--no-focus-lineheight);
+}
+
+.title_header {
+  justify-self: start;
 }
 
 .header__paragraph{
@@ -66,10 +97,11 @@
   color: var(--header-font-color);
   font-size: var(--main-font-size);
   line-height: var(--main-font-lineheight);
+  justify-items: end;
 }
 
 .header__theme-menu{
-
+  justify-self: end;
 }
 
 .header__theme-menu-list {
@@ -83,7 +115,6 @@
 }
 
 .header__theme-menu-button{
-
   cursor: pointer;
   text-transform: lowercase;
   min-inline-size: 70px;
@@ -97,8 +128,89 @@
   border: none;
 }
 
+.header__theme-menu-button:hover{
+  outline: 1px solid var(--accent-color-opacity);
+}
+
+.header__theme-menu-button:focus{
+  outline-style: none;
+}
+
+.header__theme-menu-button:focus-visible{
+  border-block-end: 1px solid var(--accent-color);
+}
+
 .header__theme-menu-button_active{
   pointer-events: none;
   border: 1px solid var(--accent-color);
 }
 
+.main {
+  padding-block: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.article{
+  display: grid;
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: var(--main-font-size);
+  line-height: var(--main-font-lineheight);
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  text-shadow: 2px 1px 0 var(--accent-color);
+  text-decoration: none;
+  border-block-end: 1px solid var(--main-font-color);
+}
+
+.article__header{
+  font-weight: bold;
+  color: var(--accent-color);
+  font-size: inherit;
+}
+
+.article__subheader{
+  font-weight: bold;
+  color: var(--header-font-color);
+  font-size: inherit;
+}
+
+.article__block-header{
+  font-weight: normal;
+  color: var(--header-font-color);
+}
+
+.article__text{
+  font-weight: normal;
+  color: var(--main-font-color);
+}
+
+.galery {
+  display: grid;
+  gap: 10px;
+
+
+}
+
+.image {
+  max-width: 100%;
+  object-fit: contain;
+  object-position: right;
+
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-block-size: 668px;
+}

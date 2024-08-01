@@ -5,10 +5,10 @@
 
 :root {
   --accent-color: #FF0070;
+  --accent-color-opacity: rgba(255, 0, 112, 0.6);
   --header-font-color: #000028;
   --main-font-color: #F1B2CE;
   --no-focus-color: #DB00FF;
-  --no-focus-size: 116px;
   --no-focus-lineheight: 95.7px;
   --main-font-size: 18px;
   --main-font-lineheight: 23.4px;
