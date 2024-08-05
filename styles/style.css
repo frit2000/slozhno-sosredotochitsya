@@ -357,7 +357,6 @@
     grid-template-rows:
       clamp(12rem, -0.75rem + 26.5625vw, 16.25rem)
       clamp(14.375rem, -1.5625rem + 33.2031vw, 19.6875rem) 1fr;
-    /* clamp(19.875rem, -0.75rem + 42.9688vw, 26.75rem); */
     grid-template-areas:
       "sunset sunset ice-cream"
       "tape books ice-cream"
