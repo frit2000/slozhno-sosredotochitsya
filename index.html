@@ -18,7 +18,7 @@
   </head>
   <body class="page">
     <header class="header decorated-zone side-padding">
-      <div class="header__decoration" aria-hidden="true"></div>
+      <span class="header__decoration" aria-hidden="true"></span>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -52,7 +52,7 @@
       </p>
     </header>
     <main class="main side-padding">
-      <article class="article description">
+      <section class="article description">
         <h2 class="article__header">Почему сосредоточиться так сложно</h2>
         <ul class="cards">
           <li class="card">
@@ -88,8 +88,8 @@
             </p>
           </li>
         </ul>
-      </article>
-      <article class="article questions">
+      </section>
+      <section class="article questions">
         <h2 class="article__header">Что снижает концентрацию внимания?</h2>
         <ul class="cards">
           <li class="card">
@@ -127,8 +127,8 @@
             </p>
           </li>
         </ul>
-      </article>
-      <article class="article solutions">
+      </section>
+      <section class="article solutions">
         <h2 class="article__header">
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
           секунд)
@@ -196,10 +196,10 @@
             </p>
           </li>
         </ul>
-      </article>
-      <article class="article media-grid">
+      </section>
+      <section class="article media-grid">
         <h3 class="article__subheader title-decor">А можно в картинках?</h3>
-        <section class="galery">
+        <div class="galery">
           <img
             class="image"
             src="./images/sunset.png"
@@ -230,12 +230,12 @@
             alt="Рисованная улица с зданиями по обеим сторонам"
             loading="lazy"
           />
-        </section>
-      </article>
+        </div>
+      </section>
     </main>
+    <footer class="footer title decorated-zone">
+      focus
+    </footer>
     <script src="./scripts/script.js"></script>
-  </body>
-  <footer class="footer title decorated-zone">
-    focus
-  </footer>
+</body>
 </html>

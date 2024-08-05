@@ -1,6 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
-  background-image: var(--background);
+  background-image: var(--background, #000028);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -22,14 +22,12 @@
 }
 
 .header {
-  background-image: var(--background);
-  background-position: center;
-  background-size: cover;
+  min-block-size: 668px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
   block-size: 100vh;
-  inline-size: 100vw;
+  /* inline-size: 100vw; */
   padding-block: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
 }
 
@@ -65,6 +63,7 @@
 }
 
 .header__decoration {
+  display: block;
   position: absolute;
   inset-inline-end: 19px;
   inset-block-start: 10px;
@@ -78,7 +77,7 @@
   color: var(--accent-color);
   font-size: var(--main-font-size);
   line-height: var(--main-font-lineheight);
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
 }
 
 .header__decoration::after {
@@ -91,10 +90,9 @@
 }
 
 .title {
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
   font-weight: bold;
   color: var(--no-focus-color);
-  text-shadow: 4px 4px 0 var(--shadow-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: clamp(5.98125rem, 5.7844rem + 0.8397vw, 6.1875rem);
 }
@@ -108,6 +106,7 @@
 
 .title_header {
   justify-self: start;
+  text-shadow: 4px 4px 0 var(--shadow-color);
 }
 
 @media (width > 767px) {
@@ -117,7 +116,7 @@
 }
 
 .header__paragraph {
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
   font-weight: bold;
   color: var(--header-font-color);
   font-size: var(--main-font-size);
@@ -157,7 +156,7 @@
   min-inline-size: 70px;
   min-block-size: 26px;
   background-color: transparent;
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
   font-weight: normal;
   font-size: var(--main-font-size);
   line-height: 18px;
@@ -197,10 +196,14 @@
 }
 
 .article {
-  font-family: "IBM Plex mono", sans-serif;
+  font-family: "IBM Plex mono", monospace;
   font-size: var(--main-font-size);
   line-height: var(--main-font-lineheight);
   gap: 20px;
+}
+
+.article .article__subheader {
+  margin-inline-start: 5px;
 }
 
 .description {
@@ -298,8 +301,17 @@
 
 @media (1023px > width > 767px) {
   .cards {
-    padding-left: 4px;
+    padding-inline-start: 5px;
   }
+
+  .questions .cards {
+    padding-inline-start: 0;
+  }
+
+  .questions .cards .article__subheader{
+    margin-inline-start: 0px;
+  }
+
 }
 
 .card {
@@ -309,12 +321,12 @@
 }
 
 .link {
-  text-shadow: 2px 1px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
   text-decoration: none;
 }
 
 .link:hover {
-  text-decoration: underline;
+  border-block-end: 1px solid var(--main-font-color);
 }
 
 .link:focus {
@@ -395,8 +407,12 @@
 }
 
 .footer {
+  text-shadow: 2px 2px 0 var(--shadow-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  min-block-size: 100vh;
+  block-size: 100vh;
+  min-block-size: 668px;
 }
+
+
