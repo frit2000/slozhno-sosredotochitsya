@@ -1,6 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
-  background-image: var(--background, #000028);
+  background-color: var(--background-color);
+  background-image: var(--background);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -65,8 +66,8 @@
 .header__decoration {
   display: block;
   position: absolute;
-  inset-inline-end: 19px;
-  inset-block-start: 10px;
+  inset-inline-end: clamp(1.25rem, 0.6536rem + 2.5445vw, 1.875rem);
+  inset-block-start: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
   display: flex;
   align-items: center;
   gap: 10px;

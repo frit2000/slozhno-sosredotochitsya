@@ -24,7 +24,7 @@
   --main-font-size: 18px;
   --main-font-lineheight: 23.4px;
   --background: url(/images/cover-image-dark.png);
-  background-image: var(--background, #000028);
+  --background-color: #000028;
 }
 
 .page.theme_dark .header__decoration {

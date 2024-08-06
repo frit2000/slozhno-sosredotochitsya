@@ -78,7 +78,7 @@
   --main-font-color: #353430;
   --no-focus-color: #ffc2e6;
   --background: url(/images/cover-image-light.png);
-  background-image: var(--background, #fff1f7);
+  --background-color: #fff1f7;
 }
 
 .page.theme_light .header__decoration {
