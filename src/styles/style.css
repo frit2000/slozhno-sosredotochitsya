@@ -1,4 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
 .page {
   background-color: var(--background-color);
   background-image: var(--background);
@@ -13,6 +14,7 @@
 }
 
 @media (767px < width) {
+
   .side-padding {
     padding-inline: 20px;
   }
@@ -33,6 +35,7 @@
 }
 
 @media (width >767px) {
+
   .header {
     padding-block: 20px;
   }
@@ -41,9 +44,10 @@
 .decorated-zone {
   position: relative;
 }
+
 .decorated-zone::before {
   position: absolute;
-  content: "";
+  content: '';
   block-size: 25px;
   inline-size: 25px;
   border-inline-end: 1px solid var(--corner-color);
@@ -54,7 +58,7 @@
 
 .decorated-zone::after {
   position: absolute;
-  content: "";
+  content: '';
   block-size: 25px;
   inline-size: 25px;
   border-inline-start: 1px solid var(--corner-color);
@@ -64,7 +68,6 @@
 }
 
 .header__decoration {
-  display: block;
   position: absolute;
   inset-inline-end: clamp(1.25rem, 0.6536rem + 2.5445vw, 1.875rem);
   inset-block-start: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
@@ -74,16 +77,16 @@
 }
 
 .header__decoration::before {
-  content: "REC";
+  content: 'REC';
   color: var(--accent-color);
   font-size: var(--main-font-size);
   line-height: var(--main-font-lineheight);
-  font-family: "IBM Plex mono", monospace;
+  font-family: 'IBM Plex mono', monospace;
 }
 
 .header__decoration::after {
-  content: "";
-  box-shadow: 0px 0px 4px 2px var(--shadow-color);
+  content: '';
+  box-shadow: 0 0 4px 2px var(--shadow-color);
   block-size: 9px;
   inline-size: 9px;
   border-radius: 50%;
@@ -91,7 +94,7 @@
 }
 
 .title {
-  font-family: "IBM Plex mono", monospace;
+  font-family: 'IBM Plex mono', monospace;
   font-weight: bold;
   color: var(--no-focus-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -99,6 +102,7 @@
 }
 
 @media (width > 767px) {
+
   .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     line-height: clamp(6.1875rem, 0.4631rem + 11.9258vw, 8.095625rem);
@@ -111,13 +115,14 @@
 }
 
 @media (width > 767px) {
+
   .title_header {
     margin-inline-start: -20px;
   }
 }
 
 .header__paragraph {
-  font-family: "IBM Plex mono", monospace;
+  font-family: 'IBM Plex mono', monospace;
   font-weight: bold;
   color: var(--header-font-color);
   font-size: var(--main-font-size);
@@ -132,6 +137,7 @@
 }
 
 @media (width > 1023px) {
+
   .header__theme-menu {
     justify-self: center;
     align-self: flex-start;
@@ -145,6 +151,7 @@
 }
 
 @media (width > 1023px) {
+
   .header__theme-menu-list {
     grid-template-rows: none;
     grid-template-columns: repeat(3, 1fr);
@@ -157,7 +164,7 @@
   min-inline-size: 70px;
   min-block-size: 26px;
   background-color: transparent;
-  font-family: "IBM Plex mono", monospace;
+  font-family: 'IBM Plex mono', monospace;
   font-weight: normal;
   font-size: var(--main-font-size);
   line-height: 18px;
@@ -190,6 +197,7 @@
 }
 
 @media (width > 767px) {
+
   .main {
     padding-block: 60px;
     gap: 80px;
@@ -197,7 +205,7 @@
 }
 
 .article {
-  font-family: "IBM Plex mono", monospace;
+  font-family: 'IBM Plex mono', monospace;
   font-size: var(--main-font-size);
   line-height: var(--main-font-lineheight);
   gap: 20px;
@@ -212,12 +220,13 @@
 }
 
 @media (width > 767px) {
+
   .description {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
-      "description_header description_text description_text"
-      "description_header description_text description_text";
+      'description_header description_text description_text'
+      'description_header description_text description_text';
   }
 
   .description .article__header {
@@ -234,12 +243,13 @@
 }
 
 @media (767px < width) {
+
   .questions {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: min-content 1fr;
     grid-template-areas:
-      "questions_header . ."
-      "questions_text questions_text questions_text";
+      'questions_header . .'
+      'questions_text questions_text questions_text';
   }
 
   .questions .article__header {
@@ -252,6 +262,7 @@
 }
 
 @media (width > 1023px) {
+
   .questions .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -263,12 +274,13 @@
 }
 
 @media (width > 767px) {
+
   .solutions {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: min-content 1fr;
     grid-template-areas:
-      "solutions_header solutions_subheader solutions_subheader"
-      "solutions_header solutions_text solutions_text";
+      'solutions_header solutions_subheader solutions_subheader'
+      'solutions_header solutions_text solutions_text';
   }
 
   .solutions .article__header {
@@ -278,6 +290,7 @@
   .solutions .article__subheader {
     grid-area: solutions_subheader;
   }
+
   .solutions .cards {
     grid-area: solutions_text;
   }
@@ -289,6 +302,7 @@
 }
 
 @media (767px < width) {
+
   .media-grid {
     gap: 20px;
   }
@@ -301,6 +315,7 @@
 }
 
 @media (1023px > width > 767px) {
+
   .cards {
     padding-inline-start: 5px;
   }
@@ -309,10 +324,9 @@
     padding-inline-start: 0;
   }
 
-  .questions .cards .article__subheader{
-    margin-inline-start: 0px;
+  .questions .cards .article__subheader {
+    margin-inline-start: 0;
   }
-
 }
 
 .card {
@@ -333,6 +347,7 @@
 .link:focus {
   outline-style: none;
 }
+
 .link:focus-visible {
   outline: 1px solid var(--main-font-color);
 }
@@ -365,16 +380,17 @@
 }
 
 @media (width > 767px) {
+
   .galery {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows:
       clamp(12rem, -0.75rem + 26.5625vw, 16.25rem)
       clamp(14.375rem, -1.5625rem + 33.2031vw, 19.6875rem) 1fr;
     grid-template-areas:
-      "sunset sunset ice-cream"
-      "tape books ice-cream"
-      "tape street street"
-      "tape street street";
+      'sunset sunset ice-cream'
+      'tape books ice-cream'
+      'tape street street'
+      'tape street street';
     gap: 20px;
   }
 
@@ -415,5 +431,3 @@
   block-size: 100vh;
   min-block-size: 668px;
 }
-
-

@@ -16,7 +16,7 @@
   --corner-color: #ff0070;
   --shadow-color: #ff0070;
   --accent-color: #ff0070;
-  --accent-color-opacity: rgba(255, 0, 112, 0.4);
+  --accent-color-opacity: rgb(255 0 112 / 0.4);
   --header-font-color: #000028;
   --main-font-color: #f1b2ce;
   --no-focus-color: #db00ff;
