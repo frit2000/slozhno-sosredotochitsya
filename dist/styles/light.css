@@ -1,0 +1,104 @@
+:root.theme-light {
+  /* Переменные светлой темы */
+}
+
+/* Остальные стили */
+
+@media (prefers-color-scheme: light) {
+
+  :root {
+    /* Дублируем переменные светлой темы */
+    --corner-color: #353430;
+    --accent-color: #ff8dcb;
+    --shadow-color: #ff8dcb;
+    --accent-color-opacity: rgb(53 52 48 / 0.4);
+    --header-font-color: #353430;
+    --main-font-color: #353430;
+    --no-focus-color: #ffc2e6;
+    --background: url(/images/cover-image-light.png);
+  }
+
+  .header__decoration {
+    visibility: hidden;
+  }
+
+  .article__header {
+    color: var(--header-font-color);
+  }
+
+  .header__theme-menu-button {
+    color: var(--header-font-color);
+  }
+
+  .header__theme-menu-button:focus-visible {
+    border-block-end: 1px solid var(--main-font-color);
+  }
+
+  .header__theme-menu-button_active {
+    border: 1px solid var(--main-font-color);
+  }
+}
+
+/* Остальные стили */
+
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+.page.theme_light .header__decoration {
+  visibility: hidden;
+}
+
+.page.theme_light .article__header {
+  color: var(--header-font-color);
+}
+
+.page.theme_light .header__theme-menu-button {
+  color: var(--header-font-color);
+}
+
+.page.theme_light .header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--main-font-color);
+}
+
+.page.theme_light .header__theme-menu-button_active {
+  border: 1px solid var(--main-font-color);
+}
+
+.page.theme_light {
+  /* сохраните этот селектор в приведённом виде.
+    Так стили написанные ниже будут иметь больший вес,
+    чем стили в медиазапросе предпочтений пользователя
+  */
+  --corner-color: #353430;
+  --accent-color: #ff8dcb;
+  --shadow-color: #ff8dcb;
+  --accent-color-opacity: rgb(53 52 48 / 0.4);
+  --header-font-color: #353430;
+  --main-font-color: #353430;
+  --no-focus-color: #ffc2e6;
+  --background: url(/images/cover-image-light.png);
+  --background-color: #fff1f7;
+}
+
+.page.theme_light .header__decoration {
+  display: none;
+}
+
+.page.theme_light .article__header {
+  color: var(--header-font-color);
+}
+
+.page.theme_light .header__theme-menu-button {
+  color: var(--header-font-color);
+}
+
+.page.theme_light .header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--main-font-color);
+}
+
+.page.theme_light .header__theme-menu-button_active {
+  border: 1px solid var(--main-font-color);
+}

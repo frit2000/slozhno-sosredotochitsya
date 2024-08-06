@@ -1,0 +1,433 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+.page {
+  background-color: var(--background-color);
+  background-image: var(--background);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+
+.side-padding {
+  padding-inline: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+}
+
+@media (767px < width) {
+
+  .side-padding {
+    padding-inline: 20px;
+  }
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+.header {
+  min-block-size: 668px;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+  block-size: 100vh;
+  /* inline-size: 100vw; */
+  padding-block: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+}
+
+@media (width >767px) {
+
+  .header {
+    padding-block: 20px;
+  }
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  position: absolute;
+  content: '';
+  block-size: 25px;
+  inline-size: 25px;
+  border-inline-end: 1px solid var(--corner-color);
+  border-block-start: 1px solid var(--corner-color);
+  inset-inline-end: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  inset-block-start: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+}
+
+.decorated-zone::after {
+  position: absolute;
+  content: '';
+  block-size: 25px;
+  inline-size: 25px;
+  border-inline-start: 1px solid var(--corner-color);
+  border-block-end: 1px solid var(--corner-color);
+  inset-inline-start: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  inset-block-end: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+}
+
+.header__decoration {
+  position: absolute;
+  inset-inline-end: clamp(1.25rem, 0.6536rem + 2.5445vw, 1.875rem);
+  inset-block-start: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header__decoration::before {
+  content: 'REC';
+  color: var(--accent-color);
+  font-size: var(--main-font-size);
+  line-height: var(--main-font-lineheight);
+  font-family: 'IBM Plex mono', monospace;
+}
+
+.header__decoration::after {
+  content: '';
+  box-shadow: 0 0 4px 2px var(--shadow-color);
+  block-size: 9px;
+  inline-size: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+
+.title {
+  font-family: 'IBM Plex mono', monospace;
+  font-weight: bold;
+  color: var(--no-focus-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: clamp(5.98125rem, 5.7844rem + 0.8397vw, 6.1875rem);
+}
+
+@media (width > 767px) {
+
+  .title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    line-height: clamp(6.1875rem, 0.4631rem + 11.9258vw, 8.095625rem);
+  }
+}
+
+.title_header {
+  justify-self: start;
+  text-shadow: 4px 4px 0 var(--shadow-color);
+}
+
+@media (width > 767px) {
+
+  .title_header {
+    margin-inline-start: -20px;
+  }
+}
+
+.header__paragraph {
+  font-family: 'IBM Plex mono', monospace;
+  font-weight: bold;
+  color: var(--header-font-color);
+  font-size: var(--main-font-size);
+  line-height: var(--main-font-lineheight);
+  justify-items: end;
+  inline-size: max(355px, calc(100% / 2));
+  justify-self: end;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+@media (width > 1023px) {
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: flex-start;
+  }
+}
+
+.header__theme-menu-list {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+@media (width > 1023px) {
+
+  .header__theme-menu-list {
+    grid-template-rows: none;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.header__theme-menu-button {
+  cursor: pointer;
+  text-transform: lowercase;
+  min-inline-size: 70px;
+  min-block-size: 26px;
+  background-color: transparent;
+  font-family: 'IBM Plex mono', monospace;
+  font-weight: normal;
+  font-size: var(--main-font-size);
+  line-height: 18px;
+  color: var(--accent-color);
+  border: none;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--accent-color-opacity);
+}
+
+.header__theme-menu-button:focus {
+  outline-style: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--accent-color);
+}
+
+.main {
+  padding-block: clamp(2.5rem, 1.3595rem + 4.8662vw, 3.75rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3.125rem, 1.4142rem + 7.2993vw, 5rem);
+}
+
+@media (width > 767px) {
+
+  .main {
+    padding-block: 60px;
+    gap: 80px;
+  }
+}
+
+.article {
+  font-family: 'IBM Plex mono', monospace;
+  font-size: var(--main-font-size);
+  line-height: var(--main-font-lineheight);
+  gap: 20px;
+}
+
+.article .article__subheader {
+  margin-inline-start: 5px;
+}
+
+.description {
+  display: grid;
+}
+
+@media (width > 767px) {
+
+  .description {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      'description_header description_text description_text'
+      'description_header description_text description_text';
+  }
+
+  .description .article__header {
+    grid-area: description_header;
+  }
+
+  .description .cards {
+    grid-area: description_text;
+  }
+}
+
+.questions {
+  display: grid;
+}
+
+@media (767px < width) {
+
+  .questions {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+      'questions_header . .'
+      'questions_text questions_text questions_text';
+  }
+
+  .questions .article__header {
+    grid-area: questions_header;
+  }
+
+  .questions .cards {
+    grid-area: questions_text;
+  }
+}
+
+@media (width > 1023px) {
+
+  .questions .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.solutions {
+  display: grid;
+}
+
+@media (width > 767px) {
+
+  .solutions {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+      'solutions_header solutions_subheader solutions_subheader'
+      'solutions_header solutions_text solutions_text';
+  }
+
+  .solutions .article__header {
+    grid-area: solutions_header;
+  }
+
+  .solutions .article__subheader {
+    grid-area: solutions_subheader;
+  }
+
+  .solutions .cards {
+    grid-area: solutions_text;
+  }
+}
+
+.media-grid {
+  display: grid;
+  gap: 10px;
+}
+
+@media (767px < width) {
+
+  .media-grid {
+    gap: 20px;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (1023px > width > 767px) {
+
+  .cards {
+    padding-inline-start: 5px;
+  }
+
+  .questions .cards {
+    padding-inline-start: 0;
+  }
+
+  .questions .cards .article__subheader {
+    margin-inline-start: 0;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+.link:hover {
+  border-block-end: 1px solid var(--main-font-color);
+}
+
+.link:focus {
+  outline-style: none;
+}
+
+.link:focus-visible {
+  outline: 1px solid var(--main-font-color);
+}
+
+.article__header {
+  font-weight: bold;
+  color: var(--accent-color);
+  font-size: inherit;
+}
+
+.article__subheader {
+  font-weight: bold;
+  color: var(--header-font-color);
+  font-size: inherit;
+}
+
+.article__block-header {
+  font-weight: normal;
+  color: var(--header-font-color);
+}
+
+.article__text {
+  font-weight: normal;
+  color: var(--main-font-color);
+}
+
+.galery {
+  display: grid;
+  gap: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+}
+
+@media (width > 767px) {
+
+  .galery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:
+      clamp(12rem, -0.75rem + 26.5625vw, 16.25rem)
+      clamp(14.375rem, -1.5625rem + 33.2031vw, 19.6875rem) 1fr;
+    grid-template-areas:
+      'sunset sunset ice-cream'
+      'tape books ice-cream'
+      'tape street street'
+      'tape street street';
+    gap: 20px;
+  }
+
+  .image:nth-child(1) {
+    grid-area: sunset;
+  }
+
+  .image:nth-child(2) {
+    grid-area: ice-cream;
+  }
+
+  .image:nth-child(3) {
+    grid-area: tape;
+  }
+
+  .image:nth-child(4) {
+    grid-area: books;
+  }
+
+  .image:nth-child(5) {
+    grid-area: street;
+  }
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.footer {
+  text-shadow: 2px 2px 0 var(--shadow-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 100vh;
+  min-block-size: 668px;
+}
